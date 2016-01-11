@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'finance_goal/style.css' %}" />
+
+<html>
+<div id="content">
+<h1>Finance goals</h1>
+
+{% if goal_list %}
+<div id="goallist">
+{% for goal in goal_list %}
+<div class="goal">
+<span class="goal_current">{{goal.current_amount}}</span>
+<span class="goal_divider">/</span>
+<span class="goal_end">{{goal.goal_amount}}</span>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<p>No goals found!</p>
+{% endif %}
+</div>
