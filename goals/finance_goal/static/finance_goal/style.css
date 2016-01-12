@@ -1,9 +1,21 @@
+body {
+    font-family: Arial,Helvetica,sans-serif;
+}
+
 #content {
     margin: 2em 3em 3em 2em;
 }
 
+#goallist {
+    width: 75%
+}
+
 .goal {
     margin: 2em 2em 2em 2em;
+}
+
+.goal_description {
+    margin-left: .25em;
 }
 
 .goal_detail {
