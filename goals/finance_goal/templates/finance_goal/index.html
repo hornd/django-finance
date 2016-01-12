@@ -1,23 +1,30 @@
 {% load staticfiles %}
+{% load math %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'finance_goal/style.css' %}" />
 
 <html>
 <div id="content">
-<h1>Finance goals</h1>
+<h1>2016 Finance goals</h1>
 
 {% if goal_list %}
 <div id="goallist">
 {% for goal in goal_list %}
 <div class="goal">
-<span class="goal_description">
-{{goal.description}}
-</span>
-<div class="goal_detail">
-<span class="goal_current">{{goal.current_amount}}</span>
-<span class="goal_divider">/</span>
-<span class="goal_end">{{goal.goal_amount}}</span>
-</div>
+  <span class="goal_description">
+    {{goal.description}}
+  </span>
+  <div class="goal_detail">
+    <!--- <span class="goal_current">{{goal.current_amount}}</span> -->
+    <div class="goal_bar">
+      <div class="goal_progress{{forloop.counter0}}"></div>
+    </div>
+    <div class="goal_end">{{goal.current_amount|to_percent:goal.goal_amount}}%</div>
+    <div style="clear: both;"></div>
+  </div>
+  <div class="goal_summary">
+    Current: ${{goal.current_amount}} Goal: ${{goal.goal_amount}}
+  </div>
 </div>
 {% endfor %}
 </div>

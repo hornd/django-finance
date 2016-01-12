@@ -7,20 +7,48 @@ body {
 }
 
 #goallist {
-    width: 75%
+    width: 75%;
+    margin-top: 3em;
 }
 
 .goal {
-    margin: 2em 2em 2em 2em;
+    margin: 2em 2em 3em 2em;
 }
 
 .goal_description {
     margin-left: .25em;
+    font-style: italic;
+}
+
+.goal_bar {
+    width: 90%;
+    height: 30px;
+    background: #c7c7c7;
+    border-radius: 10px;
+    margin-top: 3px;
+    float: left;
+    overflow: hidden;
+}
+
+div[class^='goal_progress'],div[class*=' goal_progress'] {
+  float: left;
+  width: 16%;
+  height: 30px;
+  background: #003300;
+  z-index: 333;
 }
 
 .goal_detail {
-    border: 2px dotted;
-    padding: 1em 1em 1em 1em;
+    font-size: 2em;
+    padding: .1em .5em .1em .3em;
 }
 
+.goal_summary {
+    font-size: 0.7em;
+    font-weight: bold;
+    padding-left: 1.3em;
+}
 
+.goal_end {
+    float: right;
+}
