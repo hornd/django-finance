@@ -2,8 +2,11 @@
     margin: 2em 3em 3em 2em;
 }
 
-#content #goallist {
+.goal {
     margin: 2em 2em 2em 2em;
+}
+
+.goal_detail {
     border: 2px dotted;
     padding: 1em 1em 1em 1em;
 }
