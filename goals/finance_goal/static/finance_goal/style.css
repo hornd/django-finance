@@ -22,10 +22,10 @@ div[class^='finance_goal'] {
 }
 
 .goal_bar {
-    width: 90%;
+    width: 85%;
     height: 30px;
     background: #c7c7c7;
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
     margin-top: 3px;
     float: left;
     overflow: hidden;
