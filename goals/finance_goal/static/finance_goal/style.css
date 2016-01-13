@@ -8,11 +8,12 @@ body {
 
 #goallist {
     width: 75%;
-    margin-top: 3em;
+    margin-top: 2em;
 }
 
-.goal {
-    margin: 2em 2em 3em 2em;
+div[class^='finance_goal'] {
+    margin: 1em 1em 1em 1em;
+    padding: 1em 1em 1em 1em;
 }
 
 .goal_description {
@@ -30,7 +31,7 @@ body {
     overflow: hidden;
 }
 
-div[class^='goal_progress'],div[class*=' goal_progress'] {
+.goal_progress {
   float: left;
   width: 16%;
   height: 30px;
@@ -51,4 +52,8 @@ div[class^='goal_progress'],div[class*=' goal_progress'] {
 
 .goal_end {
     float: right;
+}
+
+.highlight {
+    background-color: #ebe6fa;
 }

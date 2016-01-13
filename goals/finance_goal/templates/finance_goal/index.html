@@ -2,22 +2,23 @@
 {% load math %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'finance_goal/style.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="{% static 'finance_goal/script.js' %}"></script>
 
 <html>
 <div id="content">
-<h1>2016 Finance goals</h1>
+<h1>2016 Finance Goals</h1>
 
 {% if goal_list %}
 <div id="goallist">
 {% for goal in goal_list %}
-<div class="goal">
+<div class="finance_goal{{forloop.counter0}}">
   <span class="goal_description">
     {{goal.description}}
   </span>
   <div class="goal_detail">
-    <!--- <span class="goal_current">{{goal.current_amount}}</span> -->
     <div class="goal_bar">
-      <div class="goal_progress{{forloop.counter0}}"></div>
+      <div class="goal_progress"></div>
     </div>
     <div class="goal_end">{{goal.current_amount|to_percent:goal.goal_amount}}%</div>
     <div style="clear: both;"></div>
