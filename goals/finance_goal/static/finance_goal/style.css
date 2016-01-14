@@ -32,11 +32,11 @@ div[class^='finance_goal'] {
 }
 
 .goal_progress {
-  float: left;
-  width: 16%;
-  height: 30px;
-  background: #003300;
-  z-index: 333;
+    float: left;
+    width: 16%;
+    height: 30px;
+    background: #003300;
+    z-index: 333;
 }
 
 .goal_detail {
