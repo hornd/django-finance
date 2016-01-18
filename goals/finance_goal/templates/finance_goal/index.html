@@ -12,6 +12,7 @@
 {% if goal_list %}
 <div id="goallist">
 {% for goal in goal_list %}
+<a href="{{goal.id}}">
 <div class="finance_goal{{forloop.counter0}}">
   <span class="goal_description">
     {{goal.description}}
@@ -27,6 +28,7 @@
     Current: ${{goal.current_amount}} Goal: ${{goal.goal_amount}}
   </div>
 </div>
+</a>
 {% endfor %}
 </div>
 {% else %}
