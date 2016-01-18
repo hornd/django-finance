@@ -1,11 +1,4 @@
-a {
-    color: black !important;
-    text-decoration: initial;
-}
-
-body {
-    font-family: Arial,Helvetica,sans-serif;
-}
+@import url('base.css');
 
 #content {
     margin: 2em 3em 3em 2em;
